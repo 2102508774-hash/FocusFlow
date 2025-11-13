@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FocusFlow – AI Time Manager</title>
+
+<style>
+    /* ---- BASE ---- */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Inter, sans-serif; }
+    body {
+        background: radial-gradient(circle at top, #111 0%, #000 70%);
+        color: white;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+    }
+
+    /* ---- ANIMATION ---- */
+    @keyframes fadeUp { from {opacity:0; transform:translateY(20px);} to {opacity:1; transform:translateY(0);} }
+    .fade { animation: fadeUp 1s ease forwards; opacity: 0; }
+
+    /* ---- HEADER ---- */
+    header {
+        padding: 80px 10%;
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 32px;
+        font-weight: 700;
+        background: linear-gradient(90deg, #6366f1, #0ea5e9);
+        -webkit-background-clip: text;
+        color: transparent;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+    }
+
+    .hero-title {
+        font-size: 60px;
+        font-weight: 700;
+        max-width: 900px;
+        margin: auto;
+        line-height: 1.2;
+    }
+
+    .hero-sub {
+        font-size: 20px;
+        color: #bbbbbb;
+        max-width: 700px;
+        margin: 20px auto;
+    }
+
+    .cta {
+        margin-top: 30px;
+        background: linear-gradient(90deg, #4f46e5, #0ea5e9);
+        padding: 14px 32px;
+        border-radius: 12px;
+        font-size: 18px;
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        transition: 0.3s;
+        display: inline-block;
+    }
+
+    .cta:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px #4f46e5;
+    }
+
+    /* ---- SECTION ---- */
+    section { padding: 90px 10%; }
+    .section-title {
+        font-size: 44px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    /* ---- CARDS ---- */
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 28px;
+        margin-top: 40px;
+    }
+
+    .card {
+        padding: 28px;
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 16px;
+        backdrop-filter: blur(10px);
+        transition: 0.4s;
+    }
+
+    .card:hover {
+        transform: translateY(-6px);
+        border-color: #6366f1;
+        box-shadow: 0 0 18px #27272a;
+    }
+
+    .card-title {
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    /* ---- PRICING ---- */
+    .price-box {
+        background: rgba(255,255,255,0.05);
+        padding: 40px;
+        border-radius: 20px;
+        text-align: center;
+        border: 1px solid #222;
+        transition: .3s;
+    }
+    .price-box:hover { border-color: #0ea5e9; }
+
+    .price { font-size: 48px; margin: 20px 0; }
+
+    /* ---- TESTIMONIALS ---- */
+    .testimonial {
+        background: rgba(255,255,255,0.04);
+        border-radius: 16px;
+        padding: 25px;
+        border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* ---- CONTACT FORM ---- */
+    form input, form textarea {
+        width: 100%;
+        padding: 14px;
+        margin: 10px 0;
+        background: #111;
+        border: 1px solid #333;
+        border-radius: 10px;
+        color: white;
+    }
+
+    form button {
+        padding: 14px 26px;
+        background: #4f46e5;
+        border: none;
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 18px;
+    }
+
+    /* ---- FOOTER ---- */
+    footer {
+        text-align: center;
+        padding: 40px;
+        background: #050505;
+        color: #777;
+        margin-top: 40px;
+    }
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<header class="fade">
+    <div class="logo">FocusFlow</div>
+    <div class="hero-title">Your Personal AI for Smart, Stress-free Productivity</div>
+    <p class="hero-sub">
+        Automate your schedule, optimize your meetings, and stay in focus mode —
+        powered by advanced AI made for modern professionals.
+    </p>
+
+    <a href="#pricing" class="cta">Start Free</a>
+</header>
+
+<!-- HOW IT WORKS -->
+<section id="how" class="fade">
+    <div class="section-title">How It Works</div>
+
+    <div class="grid">
+        <div class="card">
+            <div class="card-title">1. Add Your Tasks</div>
+            <p>Meetings, work, study, or personal goals — just enter what you need to do.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-title">2. AI Organizes Everything</div>
+            <p>FocusFlow builds the perfect time-optimized schedule for your day.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-title">3. Stay Focused</div>
+            <p>Smart reminders, alerts, meeting prep, and no more distractions.</p>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features" class="fade">
+    <div class="section-title">Features</div>
+
+    <div class="grid">
+        <div class="card"><div class="card-title">AI Auto-Scheduling</div><p>Plan your entire day in seconds.</p></div>
+        <div class="card"><div class="card-title">Focus Mode</div><p>Blocks distractions & boosts efficiency.</p></div>
+        <div class="card"><div class="card-title">Smart Reminders</div><p>Always stay one step ahead.</p></div>
+        <div class="card"><div class="card-title">Productivity Insights</div><p>See how your time is used.</p></div>
+    </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="fade">
+    <div class="section-title">Pricing</div>
+    <div class="grid">
+        <div class="price-box">
+            <h3>Starter</h3>
+            <div class="price">₹0</div>
+            <p>Basic scheduling + reminders</p>
+        </div>
+
+        <div class="price-box" style="border-color:#6366f1;">
+            <h3>Pro</h3>
+            <div class="price">₹199/mo</div>
+            <p>AI auto-scheduling, focus mode, insights</p>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="fade">
+    <div class="section-title">Loved by Users</div>
+    <div class="grid">
+        <div class="testimonial">“FocusFlow increased my productivity by 40%.” – Rohan</div>
+        <div class="testimonial">“The best AI time assistant I've used.” – Sarah</div>
+        <div class="testimonial">“Meetings and tasks finally feel manageable.” – Karan</div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="fade">
+    <div class="section-title">Contact Us</div>
+    <form>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Email">
+        <textarea rows="5" placeholder="Message"></textarea>
+        <button>Send</button>
+    </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    © 2025 FocusFlow — AI Time Manager. All rights reserved.
+</footer>
+
+</body>
+</html>
